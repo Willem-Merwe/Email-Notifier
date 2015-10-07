@@ -1,13 +1,16 @@
+__author__ = 'Riogan'
+
 import poplib
+import email
 import time
-from gi.repository import Notify
+from gi.Repository import Notify
 
 Notify.init("Email Notifier")
 
 # POP3 Config
-SERVER = "YOUR_MAIL_SERVER"
-USER  = "YOUR_USERNAME"
-PASSWORD = "YOUR_PASSWORD"
+SERVER = "mail.dragons-end.co.za"
+USER  = "riogan@dragons-end.co.za"
+PASSWORD = "Badger86"
 
 # connect to server
 server = poplib.POP3(SERVER)
@@ -31,3 +34,4 @@ while True:
         counter = getStat()
         Notify.Notification.new("Check your mail").show()
 
+    time.sleep(5)
